@@ -35,8 +35,20 @@ public class FollowTarget : MonoBehaviour
         if (lookAt)
         {
             // Rotacionar
+            transform.rotation =
+                Quaternion.Slerp(
+                    transform.rotation,
+                    Quaternion.LookRotation(
+                        target.transform.position - transform.position,
+                        Vector3.up
+                    ),
+                    Time.deltaTime * velocidadeRotacao
+                );
 
             // Movimentar
+            transform.Translate(
+                Vector3.forward * velocidadeMovimento * Time.deltaTime
+            );
         }
         else
         {
