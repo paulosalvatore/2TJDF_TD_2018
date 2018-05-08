@@ -9,9 +9,20 @@ public class Waypoint : MonoBehaviour
     [Header("Waypoints")]
     [Tooltip("Lista com todos os Waypoints")]
     public Waypoint[] waypoints;
+
     private int indexAtual = -1;
     private Waypoint waypointAnterior;
-    private Waypoint waypointPosterior;
+    internal Waypoint waypointPosterior;
+
+    /*
+     * internal e [HideInInspector] são quase a mesma coisa:
+     * internal mantém público e exibe no debug inspector
+     * Hide mantém público e não exibe em nenhum modo do inspector
+     *
+     * Exemplo:
+     * [HideInInspector]
+     * public Waypoint waypointPosterior;
+     */
 
     private void Start()
     {

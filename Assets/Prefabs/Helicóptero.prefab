@@ -54,7 +54,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4235273712128216}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,9 @@ GameObject:
   - component: {fileID: 54493831118584624}
   - component: {fileID: 135803346551356518}
   - component: {fileID: 135925906042897806}
-  m_Layer: 14
+  - component: {fileID: 114652085232328206}
+  - component: {fileID: 114235146959752362}
+  m_Layer: 0
   m_Name: "Helic\xF3ptero"
   m_TagString: Inimigos
   m_Icon: {fileID: 0}
@@ -104,7 +106,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4517296916283370}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: FiringPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +120,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1772752362918756}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.43, y: 5.87, z: 6.54}
+  m_LocalPosition: {x: 0.063300125, y: 1.36, z: -1.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4235273712128216}
@@ -347,6 +349,34 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &114235146959752362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772752362918756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b3729af53fb4b48a598f45c312b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypointAtual: {fileID: 0}
+--- !u!114 &114652085232328206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772752362918756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2edd68b96b91de4098aba5e380155f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  targetTag: 
+  velocidadeMovimento: 1
+  velocidadeRotacao: 1
+  lookAt: 1
 --- !u!135 &135803346551356518
 SphereCollider:
   m_ObjectHideFlags: 1

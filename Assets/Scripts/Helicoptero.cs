@@ -2,15 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Helicoptero : MonoBehaviour {
+public class Helicoptero : MonoBehaviour
+{
+    public Waypoint waypointAtual;
+    private FollowTarget followTarget;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void Start()
+    {
+        followTarget = GetComponent<FollowTarget>();
+        followTarget.target = waypointAtual.transform;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Waypoint"))
+        {
+            waypointAtual = waypointAtual.waypointPosterior;
+            followTarget.target = waypointAtual.transform;
+        }
+    }
 }
