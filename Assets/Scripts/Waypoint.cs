@@ -24,21 +24,23 @@ public class Waypoint : MonoBehaviour
      * public Waypoint waypointPosterior;
      */
 
-    private void Start()
-    {
-    }
-
     private void Update()
     {
+		CarregarSistemaWaypoints();
     }
 
-    private void OnDrawGizmos()
+    private void CarregarSistemaWaypoints()
     {
         AtualizarWaypoints();
 
         AtualizarWaypointAtual();
 
         LinkarWaypoints();
+    }
+
+    private void OnDrawGizmos()
+    {
+		CarregarSistemaWaypoints();
 
         if (waypointPosterior != null)
         {
